@@ -3,17 +3,47 @@ const Joi = require('joi').extend(require('joi-phone-number'));
 // Patient class
 class Patient {
 
-  constructor(name, add, email, pno, pass) {
-    this.name = name;
-    this.add = add;
-    this.email = email;
-    this.pno = pno;
-    this.pass = pass;
+  constructor(id, name, add, email, pno, pass) {
+    this._id = id;
+    this._name = name;
+    this._add = add;
+    this._email = email;
+    this._pno = pno;
+    this._pass = pass;
+  }
+
+  set id(id) {
+    this._id = id;
+  }
+
+  get id() {
+    return this._id;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get add() {
+    return this._add;
+  }
+
+  get email() {
+    return this._email;
+  }
+
+  get pno() {
+    return this._pno;
+  }
+
+  get pass() {
+    return this._pass;
   }
 }
 
 // Schema of valid Patients
 const Schema = Joi.object().keys({
+  id: Joi.number().integer(),
   name: Joi.string().min(3).required(),
   add: Joi.string().min(10).required(),
   email: Joi.string().email({
