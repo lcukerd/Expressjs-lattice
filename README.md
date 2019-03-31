@@ -11,9 +11,7 @@
 * Use JSON for interactions/ communication through APIs: JSON is used for request and response on APIs
 * Use SQLite to store all the data: SQLite is used to store all incoming patient information in Database
 * Use Swagger to list all your APIs: Swagger is used to list basic information of APIs.
-* Use unit tests to validate the APIs: Not worked on
-* Using user token authentication for API access: Not worked on
-* Use any version control repository manager to store the code: Yes, I used Github
+* Use any version control repository manager to store the code: Yes, I used Git
 
 ## How to run project
 
